@@ -58,4 +58,10 @@ $ cf bind-service hello-spring-cloud amqp-service
 $ cf restart
 ~~~
 
+Runs the task using the Task runner. This support for tasks is built into the platform.
+
+~~~
+cf run-task hello-spring-cloud ".java-buildpack/open_jdk_jre/bin/java org.springframework.boot.loader.JarLauncher" --name my-task
+~~~
+
 Consult the [Pivotal Cloud Foundry documentation](http://docs.pivotal.io/) for more details.
